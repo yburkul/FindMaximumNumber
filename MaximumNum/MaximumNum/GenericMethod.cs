@@ -8,7 +8,16 @@ namespace MaximumNum
 {
     public class MaxGeneric<T> where T : IComparable
     {
-        public T Maximum(T valueOne, T valueTwo, T valueThree)
+        public T valueOne;
+        public T valueTwo;
+        public T valueThree;
+        public MaxGeneric(T valueOne, T valueTwo, T valueThree)
+        {
+            this.valueOne = valueOne;
+            this.valueTwo = valueTwo;
+            this.valueThree = valueThree;
+        }
+        public void Maximum()
         {
             T maxValue = valueOne;
             if (valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) > 0)
@@ -30,7 +39,6 @@ namespace MaximumNum
             {
                 Console.WriteLine("All value are same");
             }
-            return maxValue;
         }
     }
 }

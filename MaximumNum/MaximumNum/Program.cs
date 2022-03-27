@@ -9,14 +9,14 @@ namespace MaximumNum
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome in Generic Method");
-            MaxGeneric<int> generInt = new MaxGeneric<int>();
-            generInt.Maximum(27, 88, 45);
+            MaxGeneric<int> maxGenericInt = new MaxGeneric<int>(22, 55, 44);
+            maxGenericInt.Maximum();
 
-            MaxGeneric<float> genericFloat = new MaxGeneric<float>();
-            genericFloat.Maximum(66.2f, 55.5f, 34.8f);
+            MaxGeneric<float> maxGenericFloat = new MaxGeneric<float>(56.7f, 34.9f, 67.2f);
+            maxGenericFloat.Maximum();
 
-            MaxGeneric<string> genericString = new MaxGeneric<string>();
-            genericString.Maximum("Apple", "Peach", "Banana");
+            MaxGeneric<string> maxGenericString = new MaxGeneric<string>("Apple", "Peach", "Banana");
+            maxGenericString.Maximum();
         }
     }
 }
