@@ -6,19 +6,17 @@ namespace MaximumNum
 {
     class Program
     {
-       public static void Main(string[] args)
-       {
-            MaxNum maxNum = new MaxNum();
-            maxNum.Maximum(10, 25, 53);
-            Console.WriteLine("The Maximum Number is: " + maxNum.Maximum(10, 25, 53));
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome in Generic Method");
+            MaxGeneric<int> generInt = new MaxGeneric<int>();
+            generInt.Maximum(27, 88, 45);
 
-            FloatMaxNum floatMaxNum = new FloatMaxNum();
-            floatMaxNum.MaxfloatNum(77.6f, 88.4f, 56.4f);
-            Console.WriteLine("The Maximum Float Number is: " + floatMaxNum.MaxfloatNum(77.6f, 88.4f, 56.4f));
+            MaxGeneric<float> genericFloat = new MaxGeneric<float>();
+            genericFloat.Maximum(66.2f, 55.5f, 34.8f);
 
-            MaxString maxString = new MaxString();
-            maxString.MaximumString("Apple", "Banana", "Peach");
-            Console.WriteLine("The Maximum String is: " + maxString.MaximumString("Apple", "Peach", "Banana"));
-       } 
+            MaxGeneric<string> genericString = new MaxGeneric<string>();
+            genericString.Maximum("Apple", "Peach", "Banana");
+        }
     }
 }
