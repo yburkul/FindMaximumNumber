@@ -18,11 +18,15 @@ namespace MaximumNum
            {
                 return strTwo;
            }
-           else if (strThree.CompareTo(strTwo) > 0 && strThree.CompareTo(strOne) < 0)
+           else if (strThree.CompareTo(strTwo) > 0 && strThree.CompareTo(strOne) > 0)
            {
                 return strThree;
            }
-           return null;
+           else
+           {
+                Console.WriteLine("All three string are same");
+                return null;
+           }
         }
     }
 }
