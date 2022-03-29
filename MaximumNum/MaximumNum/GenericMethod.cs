@@ -26,6 +26,11 @@ namespace MaximumNum
         public T Maximum()
         {
             var max_data = Max(data);
+            return max_data;
+        }
+        public T PrintMax()
+        {
+            var max_data = Max(data);
             Console.WriteLine("The Maximum value is: " + max_data);
             return max_data;
         }
