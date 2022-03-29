@@ -8,37 +8,26 @@ namespace MaximumNum
 {
     public class MaxGeneric<T> where T : IComparable
     {
-        public T valueOne;
-        public T valueTwo;
-        public T valueThree;
-        public MaxGeneric(T valueOne, T valueTwo, T valueThree)
+        public T[] data;
+        public MaxGeneric(T[] data)
         {
-            this.valueOne = valueOne;
-            this.valueTwo = valueTwo;
-            this.valueThree = valueThree;
+            this.data = data;
         }
-        public void Maximum()
+        public T[] Sort(T[] data)
         {
-            T maxValue = valueOne;
-            if (valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) > 0)
-            {
-                maxValue = valueOne;
-                Console.WriteLine("Maximum Value is: " + maxValue);
-            }
-            else if (valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) > 0)
-            {
-                maxValue = valueTwo;
-                Console.WriteLine("Maximum Value is: " + maxValue);
-            }
-            else if (valueThree.CompareTo(valueOne) > 0 && valueThree.CompareTo(valueTwo) > 0)
-            {
-                maxValue = valueThree;
-                Console.WriteLine("Maximum Value is: " + maxValue);
-            }
-            else
-            {
-                Console.WriteLine("All value are same");
-            }
+            Array.Sort(data);
+            return data;
+        }
+        public T Max(T[] data)
+        {
+            var sort_data = Sort(data);
+            return sort_data[^1];
+        }
+        public T Maximum()
+        {
+            var max_data = Max(data);
+            Console.WriteLine("The Maximum value is: " + max_data);
+            return max_data;
         }
     }
 }
